@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Controlador de treinos</title>
+</head>
+
+<body>
+    <!-- Cabeçalho de informações do sistema -->
+    <header>
+        <div class="title">
+            <h1>Controlador de treinos</h1>
+        </div>
+    </header>
+
+    <!-- Seção que redireciona pra a funcionalidade desejada -->
+    <section class="redirecionadores">
+        <nav class="redirecionamentoFuncionalidade">
+            <ul class="opcoesNavegacao">
+                <li class="redirecionadorFuncionalidade">
+                    <!-- Botão que habilita e desabilita a visualização da tabela esportistas -->
+                    <button onclick="visualizarElemento('funcionalidadeEsportista')" class="redirecionadorBtn" id="redirecionadorEsportista">
+                        Esportistas
+                    </button>
+                </li>
+                <li class="redirecionadorFuncionalidade">
+                    <!-- Botão que habilita e desabilita a visualização da tabela treino -->
+                    <button onclick="visualizarElemento('funcionalidadeTreino')" class="redirecionadorBtn" id="redirecionadorTreino">
+                        Treinos
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Seção de resposta para a funcionalidade Esportista -->
+    <section class="funcionalidade" id="funcionalidadeEsportista" hidden="hidden">
+        <!-- Seção com inputs para registrar um novo esportista -->
+        <section class="funcionalidadeInputs">
+            <input type="text" id="inputNomeCompleto" placeholder="Nome completo:">
+            <input type="number" min="0" id="inputIdade" placeholder="Idade:">
+            <input type="text" id="inputAltura" placeholder="Altura: [cm]:">
+            <input type="text" id="inputPeso" placeholder="Peso: [kg]">
+            <button onclick="registrarEsportista()" class="adicionarBtn">Registrar</button>
+        </section>
+        <!-- Seção contendo a tabela de esportistas registrados -->
+        <section class="funcionalidadeTabela">
+            <table id="tabelaEsportista">
+                <tr>
+                    <th id="nomeCompleto">Nome Completo</th>
+                    <th id="idade">Idade</th>
+                    <th id="altura">Altura [cm]</th>
+                    <th id="peso">Peso [kg]</th>
+                    <th id="removerEsportista"><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px"></th>
+                </tr>
+            </table>
+        </section>
+    </section>
+
+    <!-- Seção de resposta para a funcionalidade Treino -->
+    <section class="funcionalidade" id="funcionalidadeTreino" hidden="hidden">
+        <!-- Seção com inputs para registrar um novo treino -->
+        <section class="funcionalidadeInputs">
+            <input type="text" id="inputNomeEsportista" placeholder="Nome completo:">
+            <input type="date" id="inputDataTreino" placeholder="DD/MM/AAAA", onfocus="(this.type='date')">
+            <input type="text" id="inputEsporte" placeholder="Esporte:">
+            <input type="text" id="inputDuracao" placeholder="Duracao: [hh:mm:ss]">
+            <input type="text" id="inputCaloria" placeholder="Calorias: [cal]">
+            <input type="text" id="inputBpm" placeholder="Bpm médios: [bpm]">
+            <button onclick="registrarTreino()" class="adicionarBtn">Registrar</button>
+        </section>
+        <!-- Seção contendo a tabela de treinos registrados -->
+        <section class="funcionalidadeTabela">
+            <table id="tabelaTreino">
+                <tr>
+                    <th id="nomeEsportista">Esportista</th>
+                    <th id="dataTreino">Data do treino</th>
+                    <th id="esporte">Esporte</th>
+                    <th id="duracao">Duração [hh:mm:ss]</th>
+                    <th id="caloria">Calorias [cal]</th>
+                    <th id="bpm">Bpm médios [bpm]</th>
+                    <th id="removerTreino"><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px"></th> 
+                </tr>
+            </table>
+        </section>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
+
+
