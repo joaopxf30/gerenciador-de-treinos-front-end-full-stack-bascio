@@ -29,7 +29,7 @@ Particularidades:
 ### Funcionalidade de treinos
 
 Particularidades:
-* Só é possível registrar um treino, caso o esportista associado já tenha sido previamente registrado! Há uma restrição de integridade referencial no banco de dados;
+* Só é possível registrar um treino caso o esportista associado já tenha sido previamente cadastrado! Há uma restrição de integridade referencial no banco de dados;
 * Não é possível registrar mais de um treino por dia de uma mesma modalidade vinculada ao mesmo esportista! Há uma restrição de chave no banco de dados;
 
 ### Documentação das APIs
