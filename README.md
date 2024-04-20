@@ -13,7 +13,7 @@ Para acessar a página web desenvolvida para o usuário, basta abrir o arquivo `
 A interação do usuário com a interface só será propriamente estabelecida caso o seguinte comando na aplicação do back-end (maiores detalhes são encontrados no README.md do back-end) esteja em execução:
 
 ```
-(env)$ flask run --host 0.0.0.0 --port 5001
+flask run --host 0.0.0.0 --port 5001
 ```
 
 ## Funcionalidades oferecidas na interface
