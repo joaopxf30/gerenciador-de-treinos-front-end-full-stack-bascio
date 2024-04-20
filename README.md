@@ -40,7 +40,7 @@ A documentação das APIs se encontra disponibilizada no Swagger através do seg
 
 ### Linguagem de programação
 
-As linguagens utilizadas no front-end são JavaScript, CSS e HTML. Não há a utilização de frameworks/bibliotecas, material UI ou boostrap.
+As linguagens utilizadas no front-end são JavaScript, CSS e HTML. Não há a utilização de frameworks/bibliotecas, material UI ou bootstrap.
 
 
 
