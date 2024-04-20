@@ -75,10 +75,11 @@ const postEsportista = async (
     .then((response) => {
       if (response.ok) {
         return response.json()
-      } else if (response.status == 409) {
-        throw new Error("Já existe registro do esportista")
       } else {
-        throw new Error("Não foi possível registrar novo esportista.")
+        return response.json()
+        .then((result) => {
+          throw new Error(result.message)
+        })
       }
     });
 }
@@ -296,6 +297,8 @@ const inserirListaEsportista = (nomeCompleto, idade, altura, peso) => {
       alert("Nome completo do esportista deve ser informado!");
     } else if (inputDataTreino === "") {
       alert("A data do treino deve ser informada!")
+    } else if (inputEsporte === "") {
+      alert("A modalidade deve ser informada!")
     } else if (inputDuracao !== "" && !timeRegex.test(inputDuracao)) {
       alert("O tempo de duração quando informado deve ser dado em hh:mm:ss");
     } else if (inputCaloria !== "" && isNaN(inputCaloria)) {
@@ -394,7 +397,8 @@ const visualizarElemento = (idElemento) => {
 */
 function alteraDataPadraoISO(strDataISO) {
   const options = {day: "2-digit", month: "2-digit", year: "numeric"};
-  var dataISO = new Date(strDataISO);
+  const utcTimeZone = "T00:00:00";
+  var dataISO = new Date(strDataISO + utcTimeZone);
   var strDataBR = dataISO.toLocaleDateString("pt-BR", options);
   return strDataBR
 }

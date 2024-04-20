@@ -32,6 +32,10 @@ Particularidades:
 * Só é possível registrar um treino, caso o esportista associado já tenha sido previamente registrado! Há uma restrição de integridade referencial no banco de dados;
 * Não é possível registrar mais de um treino por dia de uma mesma modalidade vinculada ao mesmo esportista! Há uma restrição de chave no banco de dados;
 
+### Documentação das APIs
+
+A documentação das APIs se encontra disponibilizada no Swagger através do seguinte caminho: http://127.0.0.1:5001/openapi/swagger.
+
 ## Aspectos gerais
 
 ### Linguagem de programação
